@@ -1,4 +1,6 @@
 #include <iostream>
+#include <thread>
+#include <chrono>
 using namespace std;
 
 int main() {
@@ -12,6 +14,10 @@ int main() {
 
     cout << "Enter third number: ";
     cin >> thirdNumber;
+    
+    
+    cout << "ANALYSING..." << endl;
+    this_thread::sleep_for(chrono::seconds(2));
 
     if (firstNumber >= secondNumber && firstNumber >= thirdNumber) {
         cout << "The largest number is " << firstNumber;
